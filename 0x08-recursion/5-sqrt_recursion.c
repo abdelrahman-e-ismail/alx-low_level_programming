@@ -6,18 +6,18 @@
  * @end: the number to end search at.
  * Return: the natural square root of a number.
  */
-int sqrt_recursion_helper(int n, int start, int end)
+int sqrt_recursion_helper(int n, unsigned int start, unsigned int end)
 {
-	int mid;
+	unsigned int mid;
 
 	if (end >= start)
 	{
 		mid = start + (end - start) / 2;
-		if (mid * mid == n)
+		if (mid * mid == (unsigned int)n)
 		{
 			return (mid);
 		}
-		if (mid * mid > n)
+		if (mid * mid > (unsigned int)n)
 		{
 			return (sqrt_recursion_helper(n, start, mid - 1));
 		}
